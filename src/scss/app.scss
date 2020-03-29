@@ -1,0 +1,190 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  body{
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    a{
+      text-transform: capitalize;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+    .icona{
+      background-color: #343434;
+      text-align: right;
+      i{
+        font-size: 30px;
+        color: white;
+        padding: 10px;
+      }
+    }
+
+    #card-trigger{
+      display: none;
+      margin: 0;
+      &.active{
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        background-color: #343434;
+      }
+
+      li{
+        text-align: right;
+        background-color: #343434;
+        list-style-type: none;
+
+        a{
+          padding: 10px;
+          color: white;
+          display: inline-block;
+        }
+      }
+    }
+    #remover{
+      display: inline-block;
+      width: fit-content;
+      align-self: center;
+      margin-bottom: 25px;
+      margin-top: 25px;
+    	box-shadow:inset 0px 1px 0px 0px #f9eca0;
+    	background: linear-gradient(to bottom, #f0c911 5%, #f2ab1e 100%);
+    	background-color: #f0c911;
+    	border-radius: 6px;
+    	border:1px solid #e65f44;
+    	cursor: pointer;
+    	color: white;
+    	font-size: 15px;
+    	font-weight :bold;
+    	padding: 6px 24px;
+    	text-decoration: none;
+    	text-shadow: 0px 1px 0px #ded17c;
+      &:hover {
+      	background: linear-gradient(to bottom, #f2ab1e 5%, #f0c911 100%);
+      	background-color: #f2ab1e;
+      }
+      &:active {
+      	position: relative;
+      	top: 1px;
+      }
+    }
+
+    #cards-holder{
+      width: 100%;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      .card{
+        display: flex;
+        flex-direction: column;
+        background-color: lightgrey;
+        width: 300px;
+        margin-bottom: 25px;
+        margin-left: 10px;
+        margin-right: 10px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 5px;
+        button{
+        	box-shadow:inset 0px 1px 0px 0px #f5978e;
+        	background: linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+        	background-color: #f24537;
+        	border-radius: 6px;
+        	border:1px solid #d02718;
+        	display: inline-block;
+        	cursor: pointer;
+        	color: white;
+        	font-size: 15px;
+        	font-weight: bold;
+        	padding: 6px 24px;
+        	text-decoration: none;
+        	text-shadow: 0px 1px 0px #810e05;
+          &:hover {
+          	background: linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+          	background-color: #c62d1f;
+          }
+          &:active {
+          	position: relative;
+          	top: 1px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width:320px){
+  div#cards-holder{
+    width: 320px;
+  }
+}
+@media (min-width:640px){
+  div#cards-holder{
+    width: 640px;
+  }
+}
+@media (min-width:768px){
+  .icona{
+    display: none;
+    i.fas{
+      display: none;
+    }
+  }
+
+  ul#card-trigger{
+    margin-top: 50px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: none;
+    &.active{
+      background: none;
+      flex-direction: row;
+    }
+    li{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style-type: none;
+      margin-right: 10px;
+      background: none;
+      a{
+        box-shadow:inset 0px 1px 0px 0px #97c4fe;
+        background: linear-gradient(to bottom, #3d94f6 5%, #1e62d0 100%);
+        background-color: #3d94f6;
+        border-radius: 6px;
+        border: 1px solid #337fed;
+        display: inline-block;
+        cursor: pointer;
+        color: white;
+        font-size: 15px;
+        font-weight: bold;
+        padding: 6px 24px;
+        text-decoration: none;
+        text-shadow: 0px 1px 0px #1570cd;
+        &:hover {
+          background: linear-gradient(to bottom, #1e62d0 5%, #3d94f6 100%);
+          background-color: #1e62d0;
+          color: white
+        }
+        &:active {
+          position:relative;
+          top:1px;
+        }
+      }
+    }
+    li:last-child{
+      margin: 0;
+    }
+  }
+}
+@media (min-width:1000px){
+  div#cards-holder{
+    width: 1000px;
+    justify-content: space-around;
+  }
+}
